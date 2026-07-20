@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zomato Menu</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f6f6f6;
+}
+
+header{
+background:#e23744;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.hero{
+
+height:300px;
+
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+.hero h1{
+
+font-size:50px;
+margin-bottom:20px;
+
+}
+
+.search{
+
+width:650px;
+max-width:90%;
+margin:auto;
+position:relative;
+
+}
+
+.search input{
+
+width:100%;
+padding:18px;
+border:none;
+outline:none;
+border-radius:40px;
+font-size:17px;
+
+}
+
+.search i{
+
+position:absolute;
+right:20px;
+top:18px;
+color:#e23744;
+font-size:20px;
+
+}
+
+.tags{
+
+width:90%;
+margin:35px auto;
+text-align:center;
+
+}
+
+.tags span{
+
+display:inline-block;
+padding:10px 18px;
+background:white;
+margin:8px;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 5px 12px rgba(0,0,0,.15);
+transition:.3s;
+
+}
+
+.tags span:hover{
+
+background:#e23744;
+color:white;
+
+}
+
+.menu{
+
+width:90%;
+max-width:1200px;
+margin:40px auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+}
+
+.info{
+
+padding:20px;
+
+}
+
+.info h3{
+
+margin-bottom:10px;
+
+}
+
+.price{
+
+color:#e23744;
+
+font-weight:bold;
+
+font-size:20px;
+
+margin-bottom:15px;
+
+}
+
+button{
+
+width:100%;
+
+padding:12px;
+
+background:#e23744;
+
+border:none;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:black;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Zomato</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Explore Our Menu</h1>
+
+<div class="search">
+
+<input
+type="text"
+id="search"
+placeholder="Search your favourite dish...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="tags">
+
+<span onclick="fill('Pizza')">🍕 Pizza</span>
+
+<span onclick="fill('Burger')">🍔 Burger</span>
+
+<span onclick="fill('Biryani')">🍛 Biryani</span>
+
+<span onclick="fill('Momos')">🥟 Momos</span>
+
+<span onclick="fill('Pasta')">🍝 Pasta</span>
+
+<span onclick="fill('Coffee')">☕ Coffee</span>
+
+</div>
+
+<section class="menu">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80">
+
+<div class="info">
+
+<h3>Cheese Pizza</h3>
+
+<p class="price">₹199</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80">
+
+<div class="info">
+
+<h3>Chicken Burger</h3>
+
+<p class="price">₹149</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80">
+
+<div class="info">
+
+<h3>Special Biryani</h3>
+
+<p class="price">₹249</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80">
+
+<div class="info">
+
+<h3>French Fries</h3>
+
+<p class="price">₹99</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
